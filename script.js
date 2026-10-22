@@ -10,4 +10,11 @@ document.querySelector("#profile-birth-year").textContent = userProfile.birthYea
 document.querySelector("#profile-developer").textContent = userProfile.isDeveloper ? "Yes" : "No";
 document.querySelector("#profile-hobbies").textContent = userProfile.hobbies.join(", ");
 
+const currentYear = new Date().getFullYear();
+const currentAge = currentYear - userProfile.birthYear;
+const hobbiesCount = userProfile.hobbies.length;
+
+document.querySelector("#profile-age").textContent = currentAge;
+document.querySelector("#profile-hobbies-count").textContent = hobbiesCount;
+
 console.log("userProfile:", userProfile);
