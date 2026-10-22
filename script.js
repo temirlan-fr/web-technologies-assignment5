@@ -31,4 +31,32 @@ document.querySelector("#profile-form").addEventListener("submit", function (eve
   document.querySelector("#profile-age").textContent = new Date().getFullYear() - userProfile.birthYear;
 });
 
+const hobbiesList = document.querySelector("#hobbies-list");
+const newHobbyInput = document.querySelector("#new-hobby");
+
+userProfile.hobbies.forEach(function (hobby) {
+  const listItem = document.createElement("li");
+  listItem.textContent = hobby;
+  hobbiesList.appendChild(listItem);
+});
+
+document.querySelector("#add-hobby").addEventListener("click", function () {
+  const hobby = newHobbyInput.value.trim();
+
+  if (hobby !== "") {
+    const listItem = document.createElement("li");
+    listItem.textContent = hobby;
+    hobbiesList.appendChild(listItem);
+    newHobbyInput.value = "";
+  }
+});
+
+document.querySelector("#remove-hobby").addEventListener("click", function () {
+  const lastItem = hobbiesList.lastElementChild;
+
+  if (lastItem) {
+    lastItem.remove();
+  }
+});
+
 console.log("userProfile:", userProfile);
