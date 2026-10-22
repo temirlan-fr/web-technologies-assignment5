@@ -43,6 +43,7 @@ Added a Remove Item button for deleting the last hobby.
 
 
 Work Summary
+https://temirlan-fr.github.io/web-technologies-assignment5/
 
 This project uses HTML CSS and JavaScript.
 JavaScript is used for objects calculations form events and DOM manipulation.
