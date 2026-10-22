@@ -56,3 +56,24 @@ h1 {
   color: #3e2415;
 }
 
+form {
+  display: grid;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+input,
+button {
+  padding: 10px;
+  font: inherit;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 8px;
+  color: white;
+  background: #3e2415;
+  cursor: pointer;
+}
+
